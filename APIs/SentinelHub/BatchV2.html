@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>APIs – Documentation</title>
+<title>Batch Processing V2 API – Documentation</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,29 +20,59 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./APIs/Token.html" rel="next">
-<link href="./Data/Others/CCM.html" rel="prev">
-<link href="./_images/logos/favicon.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../_images/logos/favicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": true,
@@ -69,91 +99,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-CatalogAPIs .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-CatalogAPIs'] = new List('listing-CatalogAPIs', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-StreamlinedDataAccess .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-StreamlinedDataAccess'] = new List('listing-StreamlinedDataAccess', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-AdditionalAPIs .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-AdditionalAPIs'] = new List('listing-AdditionalAPIs', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <meta name="zd-site-verification" content="xj9koofr1crilmoclgxsjd">
 <script type="text/javascript">
 
@@ -245,37 +190,8 @@ window.onload = function() {
   });
 </script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="custom.css">
+<link rel="stylesheet" href="../../custom.css">
 </head>
 
 <body class="nav-sidebar floating nav-fixed">
@@ -286,7 +202,7 @@ window.Quarto = {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="https://dataspace.copernicus.eu/" class="navbar-brand navbar-brand-logo">
-    <img src="./_images/logos/combinedLogo.svg" alt="" class="navbar-logo">
+    <img src="../../_images/logos/combinedLogo.svg" alt="" class="navbar-logo">
     </a>
     <a class="navbar-brand" href="https://dataspace.copernicus.eu/">
     <span class="navbar-title">Documentation</span>
@@ -301,7 +217,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./APIs.html">APIs</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Batch Processing V2 API</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -323,20 +239,20 @@ window.Quarto = {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Home.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Home.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Welcome</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Roadmap.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Roadmap.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Roadmap</span></a>
   </div>
 </li>
         <li class="px-0"><hr class="sidebar-divider hi "></li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./Registration.html" class="sidebar-item-text sidebar-link">
+            <a href="../../Registration.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">User registration and authentication</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -345,7 +261,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./2FA.html" class="sidebar-item-text sidebar-link">
+  <a href="../../2FA.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Setting up Two-Factor Authentication (2FA)</span></a>
   </div>
 </li>
@@ -353,7 +269,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./Data.html" class="sidebar-item-text sidebar-link">
+            <a href="../../Data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Data</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -362,7 +278,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Data/Others/Dashboard.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Data/Others/Dashboard.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Copernicus Operations Dashboard</span></a>
   </div>
 </li>
@@ -377,31 +293,31 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Data/SentinelMissions/Sentinel1.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Data/SentinelMissions/Sentinel1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Sentinel-1</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Data/SentinelMissions/Sentinel2.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Data/SentinelMissions/Sentinel2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Sentinel-2</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Data/SentinelMissions/Sentinel3.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Data/SentinelMissions/Sentinel3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Sentinel-3</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Data/SentinelMissions/Sentinel5P.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Data/SentinelMissions/Sentinel5P.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Sentinel-5P</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Data/SentinelMissions/Sentinel6.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Data/SentinelMissions/Sentinel6.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Sentinel-6</span></a>
   </div>
 </li>
@@ -418,61 +334,61 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Data/ComplementaryData/SMOS.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Data/ComplementaryData/SMOS.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Soil Moisture and Ocean Salinity (SMOS)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Data/ComplementaryData/MERIS.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Data/ComplementaryData/MERIS.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">ENVISAT- Medium Resolution Imaging Spectrometer (MERIS)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Data/ComplementaryData/Landsat5.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Data/ComplementaryData/Landsat5.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Landsat-5</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Data/ComplementaryData/Landsat7.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Data/ComplementaryData/Landsat7.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Landsat-7</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Data/ComplementaryData/Landsat8.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Data/ComplementaryData/Landsat8.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Landsat-8</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Data/ComplementaryData/CLMS.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Data/ComplementaryData/CLMS.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Copernicus Land Monitoring Service (CLMS)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Data/ComplementaryData/CMEMS.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Data/ComplementaryData/CMEMS.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Copernicus Marine Service (CMEMS)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Data/ComplementaryData/CEMS.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Data/ComplementaryData/CEMS.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Copernicus Emergency Management Service (CEMS)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Data/ComplementaryData/CAMS.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Data/ComplementaryData/CAMS.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Copernicus Atmosphere Monitoring Service (CAMS)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Data/ComplementaryData/Additional.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Data/ComplementaryData/Additional.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Additional Complementary Data</span></a>
   </div>
 </li>
@@ -480,7 +396,7 @@ window.Quarto = {
   </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Data/Others/CCM.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Data/Others/CCM.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Copernicus Contributing Missions</span></a>
   </div>
 </li>
@@ -488,70 +404,70 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./APIs.html" class="sidebar-item-text sidebar-link active">
+            <a href="../../APIs.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">APIs</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/Token.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/Token.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Access Token</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/OData.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/OData.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">OData</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/OpenSearch.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/OpenSearch.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">OpenSearch</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/STAC.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/STAC.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">STAC product catalogue</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/Subscriptions.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/Subscriptions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Subscriptions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/S3.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/S3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">S3 Access</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/TCP.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/TCP.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">TCP stack configuration</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/On-Demand Production API.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/On-Demand Production API.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">On-Demand Production API</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/Traceability.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/Traceability.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Traceability API</span></a>
   </div>
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./APIs/openEO/openEO.html" class="sidebar-item-text sidebar-link">
+            <a href="../../APIs/openEO/openEO.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">openEO</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -569,19 +485,19 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/openEO/Python_Client/Python.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/openEO/Python_Client/Python.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Python</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/openEO/R_Client/R.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/openEO/R_Client/R.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">R</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/openEO/JavaScript_Client/JavaScript.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/openEO/JavaScript_Client/JavaScript.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">JavaScript</span></a>
   </div>
 </li>
@@ -589,31 +505,31 @@ window.Quarto = {
   </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/openEO/Glossary.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/openEO/Glossary.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Glossary</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/openEO/Collections.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/openEO/Collections.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Data Collections</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/openEO/Processes.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/openEO/Processes.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">openEO Processes</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/openEO/File_formats.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/openEO/File_formats.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">File Formats</span></a>
   </div>
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./APIs/openEO/authentication.html" class="sidebar-item-text sidebar-link">
+            <a href="../../APIs/openEO/authentication.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Authentication</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -622,7 +538,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/openEO/authentication/client_credentials.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/openEO/authentication/client_credentials.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Client Credentials</span></a>
   </div>
 </li>
@@ -642,25 +558,25 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/openEO/job_config.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/openEO/job_config.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Job configuration</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/openEO/credit_usage.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/openEO/credit_usage.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Credit usage</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/openEO/large_scale_processing.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/openEO/large_scale_processing.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Large scale processing</span></a>
   </div>
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./APIs/openEO/federation/openeo_federation.html" class="sidebar-item-text sidebar-link">
+            <a href="../../APIs/openEO/federation/openeo_federation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">openEO federation</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -669,7 +585,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/openEO/federation/backends/contract.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/openEO/federation/backends/contract.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Federation contract</span></a>
   </div>
 </li>
@@ -683,7 +599,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/openEO/fair.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/openEO/fair.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">FAIR &amp; open science</span></a>
   </div>
 </li>
@@ -691,7 +607,7 @@ window.Quarto = {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./APIs/SentinelHub.html" class="sidebar-item-text sidebar-link">
+            <a href="../../APIs/SentinelHub.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Sentinel Hub</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -709,25 +625,25 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/SentinelHub/UserGuides/Datamask.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/SentinelHub/UserGuides/Datamask.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Data Mask</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/SentinelHub/UserGuides/Transparency.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/SentinelHub/UserGuides/Transparency.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Transparency</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/SentinelHub/UserGuides/TimeSeries.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/SentinelHub/UserGuides/TimeSeries.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Time Series</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/SentinelHub/UserGuides/Metadata.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/SentinelHub/UserGuides/Metadata.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Working with metadata in evalscript</span></a>
   </div>
 </li>
@@ -735,7 +651,7 @@ window.Quarto = {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./APIs/SentinelHub/Data.html" class="sidebar-item-text sidebar-link">
+            <a href="../../APIs/SentinelHub/Data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Data</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -744,67 +660,67 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/SentinelHub/Data/S1GRD.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/SentinelHub/Data/S1GRD.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Sentinel-1 GRD</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/SentinelHub/Data/S2L1C.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/SentinelHub/Data/S2L1C.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Sentinel-2 L1C</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/SentinelHub/Data/S2L2A.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/SentinelHub/Data/S2L2A.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Sentinel-2 L2A</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/SentinelHub/Data/S3OLCI.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/SentinelHub/Data/S3OLCI.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Sentinel-3 OLCI L1B</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/SentinelHub/Data/S3OLCIL2.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/SentinelHub/Data/S3OLCIL2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Sentinel-3 OLCI L2</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/SentinelHub/Data/S3SLSTR.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/SentinelHub/Data/S3SLSTR.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Sentinel-3 SLSTR L1B</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/SentinelHub/Data/S5PL2.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/SentinelHub/Data/S5PL2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Sentinel-5P L2</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/SentinelHub/Data/DEM.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/SentinelHub/Data/DEM.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Digital Elevation Model (DEM) Data</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/SentinelHub/Data/Byoc.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/SentinelHub/Data/Byoc.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Bring Your Own COG / Batch</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/SentinelHub/Data/Zarr.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/SentinelHub/Data/Zarr.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Zarr</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/SentinelHub/Data/DataFusion.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/SentinelHub/Data/DataFusion.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Data Fusion</span></a>
   </div>
 </li>
@@ -812,7 +728,7 @@ window.Quarto = {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./APIs/SentinelHub/Evalscript.html" class="sidebar-item-text sidebar-link">
+            <a href="../../APIs/SentinelHub/Evalscript.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Evalscript (custom script)</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -821,13 +737,13 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/SentinelHub/Evalscript/V3.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/SentinelHub/Evalscript/V3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Evalscript V3</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/SentinelHub/Evalscript/Functions.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/SentinelHub/Evalscript/Functions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Utility Functions</span></a>
   </div>
 </li>
@@ -835,7 +751,7 @@ window.Quarto = {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./APIs/SentinelHub/Overview.html" class="sidebar-item-text sidebar-link">
+            <a href="../../APIs/SentinelHub/Overview.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">API Overview</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -844,25 +760,25 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/SentinelHub/Overview/Authentication.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/SentinelHub/Overview/Authentication.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Authentication</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/SentinelHub/Overview/RateLimiting.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/SentinelHub/Overview/RateLimiting.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Rate limiting</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/SentinelHub/Overview/ProcessingUnit.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/SentinelHub/Overview/ProcessingUnit.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Processing Unit</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/SentinelHub/Overview/ErrorHandling.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/SentinelHub/Overview/ErrorHandling.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Error Handling</span></a>
   </div>
 </li>
@@ -870,7 +786,7 @@ window.Quarto = {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./APIs/SentinelHub/Process.html" class="sidebar-item-text sidebar-link">
+            <a href="../../APIs/SentinelHub/Process.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Process API</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -879,7 +795,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/SentinelHub/Process/Crs.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/SentinelHub/Process/Crs.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">CRS support</span></a>
   </div>
 </li>
@@ -894,49 +810,49 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-16" class="collapse list-unstyled sidebar-section depth4 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/SentinelHub/Process/Examples/S1GRD.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/SentinelHub/Process/Examples/S1GRD.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Examples for S1GRD</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/SentinelHub/Process/Examples/S2L1C.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/SentinelHub/Process/Examples/S2L1C.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Examples for S2L1C</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/SentinelHub/Process/Examples/S2L2A.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/SentinelHub/Process/Examples/S2L2A.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Examples for S2L2A</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/SentinelHub/Process/Examples/S3OLCI.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/SentinelHub/Process/Examples/S3OLCI.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Examples for S3OLCI</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/SentinelHub/Process/Examples/S3SLSTR.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/SentinelHub/Process/Examples/S3SLSTR.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Examples for S3SLSTR</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/SentinelHub/Process/Examples/S5PL2.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/SentinelHub/Process/Examples/S5PL2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Examples for S5PL2</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/SentinelHub/Process/Examples/DEM.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/SentinelHub/Process/Examples/DEM.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Examples for DEM</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/SentinelHub/Process/Examples/DataFusion.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/SentinelHub/Process/Examples/DataFusion.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Examples for DataFusion</span></a>
   </div>
 </li>
@@ -946,7 +862,7 @@ window.Quarto = {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./APIs/SentinelHub/AsyncProcess.html" class="sidebar-item-text sidebar-link">
+            <a href="../../APIs/SentinelHub/AsyncProcess.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Asynchronous Processing API</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-17" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -955,7 +871,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-17" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/SentinelHub/AsyncProcess/Examples.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/SentinelHub/AsyncProcess/Examples.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Examples for Asynchronous Processing API</span></a>
   </div>
 </li>
@@ -963,7 +879,7 @@ window.Quarto = {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./APIs/SentinelHub/Catalog.html" class="sidebar-item-text sidebar-link">
+            <a href="../../APIs/SentinelHub/Catalog.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Catalog API</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-18" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -972,7 +888,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-18" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/SentinelHub/Catalog/Examples.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/SentinelHub/Catalog/Examples.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Examples for Catalog API</span></a>
   </div>
 </li>
@@ -980,7 +896,7 @@ window.Quarto = {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./APIs/SentinelHub/Batch.html" class="sidebar-item-text sidebar-link">
+            <a href="../../APIs/SentinelHub/Batch.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Batch Processing API</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-19" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -989,13 +905,13 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-19" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/SentinelHub/Batch/Crs.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/SentinelHub/Batch/Crs.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">CRS</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/SentinelHub/Batch/Examples.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/SentinelHub/Batch/Examples.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Examples of Batch Processing Workflow</span></a>
   </div>
 </li>
@@ -1003,7 +919,7 @@ window.Quarto = {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./APIs/SentinelHub/Statistical.html" class="sidebar-item-text sidebar-link">
+            <a href="../../APIs/SentinelHub/Statistical.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Statistical API</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-20" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -1012,7 +928,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-20" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/SentinelHub/Statistical/Examples.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/SentinelHub/Statistical/Examples.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Examples for Statistical API</span></a>
   </div>
 </li>
@@ -1020,7 +936,7 @@ window.Quarto = {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./APIs/SentinelHub/BatchStatistical.html" class="sidebar-item-text sidebar-link">
+            <a href="../../APIs/SentinelHub/BatchStatistical.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Batch Statistical API</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-21" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -1029,7 +945,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-21" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/SentinelHub/BatchStatistical/Examples.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/SentinelHub/BatchStatistical/Examples.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Examples of Batch Statistical Workflow</span></a>
   </div>
 </li>
@@ -1037,7 +953,7 @@ window.Quarto = {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./APIs/SentinelHub/Byoc.html" class="sidebar-item-text sidebar-link">
+            <a href="../../APIs/SentinelHub/Byoc.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Bring Your Own COG API</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-22" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -1046,7 +962,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-22" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/SentinelHub/Byoc/Examples.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/SentinelHub/Byoc/Examples.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">BYOC API examples</span></a>
   </div>
 </li>
@@ -1054,7 +970,7 @@ window.Quarto = {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./APIs/SentinelHub/Zarr.html" class="sidebar-item-text sidebar-link">
+            <a href="../../APIs/SentinelHub/Zarr.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Zarr Import API</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-23" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -1063,7 +979,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-23" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/SentinelHub/Zarr/Examples.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/SentinelHub/Zarr/Examples.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Zarr Import API examples</span></a>
   </div>
 </li>
@@ -1071,7 +987,7 @@ window.Quarto = {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./APIs/SentinelHub/OGC.html" class="sidebar-item-text sidebar-link">
+            <a href="../../APIs/SentinelHub/OGC.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">OGC</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-24" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -1080,43 +996,43 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-24" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/SentinelHub/OGC/WMS.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/SentinelHub/OGC/WMS.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">WMS</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/SentinelHub/OGC/WCS.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/SentinelHub/OGC/WCS.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">WCS</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/SentinelHub/OGC/WFS.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/SentinelHub/OGC/WFS.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">WFS</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/SentinelHub/OGC/WMTS.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/SentinelHub/OGC/WMTS.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">WMTS</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/SentinelHub/OGC/AdditionalRequestParameters.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/SentinelHub/OGC/AdditionalRequestParameters.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Additional Request Parameters</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/SentinelHub/OGC/OutputFormats.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/SentinelHub/OGC/OutputFormats.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Output Formats</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/SentinelHub/OGC/Examples.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/SentinelHub/OGC/Examples.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Examples for OGC</span></a>
   </div>
 </li>
@@ -1124,7 +1040,7 @@ window.Quarto = {
   </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/SentinelHub/ApiReference.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/SentinelHub/ApiReference.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">API Reference</span></a>
   </div>
 </li>
@@ -1134,7 +1050,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./Applications.html" class="sidebar-item-text sidebar-link">
+            <a href="../../Applications.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Applications</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-25" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -1143,25 +1059,25 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-25" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Applications/Browser.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Applications/Browser.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">About the Browser</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Applications/JupyterHub.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Applications/JupyterHub.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">JupyterLab</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Applications/WebEditor.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Applications/WebEditor.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">openEO Web Editor</span></a>
   </div>
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./Applications/AlgorithmPlaza.html" class="sidebar-item-text sidebar-link">
+            <a href="../../Applications/AlgorithmPlaza.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">openEO Algorithm Plaza</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -1170,25 +1086,25 @@ window.Quarto = {
       <ul id="" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Applications/PlazaDetails/ManageOrg.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Applications/PlazaDetails/ManageOrg.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Manage your Organisation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Applications/PlazaDetails/PublishService.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Applications/PlazaDetails/PublishService.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Publish a Service</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Applications/PlazaDetails/ExecuteService.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Applications/PlazaDetails/ExecuteService.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Execute a Service</span></a>
   </div>
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./Applications/PlazaDetails/ManageService.html" class="sidebar-item-text sidebar-link">
+            <a href="../../Applications/PlazaDetails/ManageService.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Manage a Service</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-26" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -1197,13 +1113,13 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-26" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Applications/PlazaDetails/ServiceMaturity.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Applications/PlazaDetails/ServiceMaturity.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Service Maturity</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Applications/PlazaDetails/Strength.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Applications/PlazaDetails/Strength.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Service credit consumption</span></a>
   </div>
 </li>
@@ -1211,7 +1127,7 @@ window.Quarto = {
   </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Applications/PlazaDetails/Reporting.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Applications/PlazaDetails/Reporting.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Reporting</span></a>
   </div>
 </li>
@@ -1219,25 +1135,25 @@ window.Quarto = {
   </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Applications/DataWorkspace.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Applications/DataWorkspace.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">About Data Workspace</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Applications/Catalogue-csv.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Applications/Catalogue-csv.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Catalogue CSV</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Applications/QGIS.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Applications/QGIS.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">QGIS Plugin</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Applications/DataSpaceDashboard.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Applications/DataSpaceDashboard.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Copernicus Data Space Ecosystem Dashboard</span></a>
   </div>
 </li>
@@ -1245,32 +1161,32 @@ window.Quarto = {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Quotas.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Quotas.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Quotas and Limitations</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ResearchNetwork.html" class="sidebar-item-text sidebar-link">
+  <a href="../../ResearchNetwork.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Access through Research Network</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Usecase.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Usecase.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Jupyter Notebook Samples</span></a>
   </div>
 </li>
         <li class="px-0"><hr class="sidebar-divider hi "></li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./FAQ.html" class="sidebar-item-text sidebar-link">
+  <a href="../../FAQ.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">FAQ</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Support.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Support.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Support</span></a>
   </div>
 </li>
@@ -1286,13 +1202,13 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-27" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/Others/UpcomingChanges.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/Others/UpcomingChanges.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Upcoming changes</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./APIs/Others/ReleaseNotes.html" class="sidebar-item-text sidebar-link">
+  <a href="../../APIs/Others/ReleaseNotes.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Release notes</span></a>
   </div>
 </li>
@@ -1308,9 +1224,43 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#catalog-apis" id="toc-catalog-apis" class="nav-link active" data-scroll-target="#catalog-apis">Catalog APIs</a></li>
-  <li><a href="#streamlined-data-access" id="toc-streamlined-data-access" class="nav-link" data-scroll-target="#streamlined-data-access">Streamlined data access</a></li>
-  <li><a href="#additionally" id="toc-additionally" class="nav-link" data-scroll-target="#additionally">Additionally</a></li>
+  <li><a href="#migration-guide" id="toc-migration-guide" class="nav-link active" data-scroll-target="#migration-guide">Migration guide</a></li>
+  <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview">Overview</a>
+  <ul>
+  <li><a href="#workflow" id="toc-workflow" class="nav-link" data-scroll-target="#workflow">Workflow</a>
+  <ul class="collapse">
+  <li><a href="#stopping-the-request" id="toc-stopping-the-request" class="nav-link" data-scroll-target="#stopping-the-request">Stopping the request</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#input-features" id="toc-input-features" class="nav-link" data-scroll-target="#input-features">Input features</a>
+  <ul>
+  <li><a href="#1-tiling-grid" id="toc-1-tiling-grid" class="nav-link" data-scroll-target="#1-tiling-grid">1. Tiling grid</a></li>
+  <li><a href="#2-geopackage" id="toc-2-geopackage" class="nav-link" data-scroll-target="#2-geopackage">2. GeoPackage</a>
+  <ul class="collapse">
+  <li><a href="#caveats" id="toc-caveats" class="nav-link" data-scroll-target="#caveats">Caveats</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#processing-results" id="toc-processing-results" class="nav-link" data-scroll-target="#processing-results">Processing results</a>
+  <ul>
+  <li><a href="#1-geotiff-output-format" id="toc-1-geotiff-output-format" class="nav-link" data-scroll-target="#1-geotiff-output-format">1. GeoTIFF output format</a></li>
+  <li><a href="#2-zarr-output-format" id="toc-2-zarr-output-format" class="nav-link" data-scroll-target="#2-zarr-output-format">2. Zarr output format</a></li>
+  </ul></li>
+  <li><a href="#ingesting-results-into-byoc" id="toc-ingesting-results-into-byoc" class="nav-link" data-scroll-target="#ingesting-results-into-byoc">Ingesting results into BYOC</a>
+  <ul>
+  <li><a href="#purpose" id="toc-purpose" class="nav-link" data-scroll-target="#purpose">Purpose</a></li>
+  </ul></li>
+  <li><a href="#feature-manifest" id="toc-feature-manifest" class="nav-link" data-scroll-target="#feature-manifest">Feature Manifest</a>
+  <ul>
+  <li><a href="#purpose-1" id="toc-purpose-1" class="nav-link" data-scroll-target="#purpose-1">Purpose</a></li>
+  <li><a href="#key-information" id="toc-key-information" class="nav-link" data-scroll-target="#key-information">Key Information</a></li>
+  </ul></li>
+  <li><a href="#execution-database" id="toc-execution-database" class="nav-link" data-scroll-target="#execution-database">Execution database</a>
+  <ul>
+  <li><a href="#purpose-2" id="toc-purpose-2" class="nav-link" data-scroll-target="#purpose-2">Purpose</a></li>
+  <li><a href="#key-information-1" id="toc-key-information-1" class="nav-link" data-scroll-target="#key-information-1">Key Information</a></li>
+  </ul></li>
+  <li><a href="#bucket-settings-and-access" id="toc-bucket-settings-and-access" class="nav-link" data-scroll-target="#bucket-settings-and-access">Bucket settings and access</a></li>
+  <li><a href="#examples" id="toc-examples" class="nav-link" data-scroll-target="#examples">Examples</a></li>
   </ul>
 </nav>
     </div>
@@ -1319,7 +1269,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">APIs</h1>
+<h1 class="title">Batch Processing V2 API</h1>
 </div>
 
 
@@ -1336,165 +1286,442 @@ window.Quarto = {
 </header>
 
 
-<p>This section gives an overview on the APIs provided by Copernicus Data Space Ecosystem.</p>
-<section id="catalog-apis" class="level2">
-<h2 class="anchored" data-anchor-id="catalog-apis">Catalog APIs</h2>
-<p>There are various interfaces providing capability to search the catalog, to serve various users’ needs and to ensure continuity over the existing Copernicus Hubs. All interfaces are connected to the same database to guarantee consistency.</p>
-<div id="listing-CatalogAPIs" class="quarto-listing quarto-listing-container-grid">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1729872828207" data-listing-reading-time-sort="21" data-listing-word-count-sort="4101">
-<a href="./APIs/OData.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-OData
-</h5>
-<div class="card-text listing-description">
-OData is an SO/IEC approved, OASIS standard , which is based on https RESTful Application Programming Interfaces. It enables resources, which are identified by URLs and…
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1729872828207" data-listing-reading-time-sort="7" data-listing-word-count-sort="1255">
-<a href="./APIs/OpenSearch.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-OpenSearch Catalog web service
-</h5>
-<div class="card-text listing-description">
-The OpenSearch catalogue allows you to search through Copernicus data using a standardized web service. The OpenSearch specification can be consulted for technical details…
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="2" data-listing-file-modified-sort="1729872828207" data-listing-reading-time-sort="4" data-listing-word-count-sort="795">
-<a href="./APIs/STAC.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-STAC product catalogue
-</h5>
-<div class="card-text listing-description">
-<strong>STAC</strong> (SpatioTemporal Asset Catalog) is a relatively new web service specification for catalogs that is increasingly used and supported. STAC data have become a de-facto…
-</div>
-</div>
-</div>
-</a>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div>
-<section id="catalog-apis-news" class="level5">
-<h5 class="anchored" data-anchor-id="catalog-apis-news">Catalog APIs news</h5>
-<p>This section provides detailed information about upcoming changes and the changelog of the implemented updates. The releases include all Catalog APIs interfaces. To avoid disruption to your scripts or apps, we recommend reviewing the upcoming changes and the latest release notes described below:</p>
-<section id="upcoming-changes" class="level6">
-<h6 class="anchored" data-anchor-id="upcoming-changes">1.<a href="./APIs/Others/UpcomingChanges.html">Upcoming Changes</a></h6>
-<p>We’ve put together a list of potential updates related to Catalog APIs as of September 2023. You can find a detailed comparison of these changes <a href="./APIs/Others/UpcomingChanges.html">here</a>.</p>
+<p><strong>The BatchV2 API is only available for users with Copernicus Service accounts.</strong> Please refer to our <a href="../../FAQ.html">FAQ</a> on account typology change and <a href="https://helpcenter.dataspace.copernicus.eu/hc/en-gb/requests/new" target="_blank">Submit A Request</a> to our Copernicus Data Space Ecosystem Support Team to request your Copernicus Service account accordingly.</p>
+<hr>
+<section id="migration-guide" class="level2">
+<h2 class="anchored" data-anchor-id="migration-guide">Migration guide</h2>
+<p>If you're interested on how to migrate from <a href="../../APIs/SentinelHub/Batch.html">Batch Processing API</a> to <strong>BatchV2</strong>, please read the following guide:</p>
+<p><a href="../../APIs/SentinelHub/BatchV2/Migration.html">BatchV2 Migration Guide</a></p>
+<hr>
 </section>
-<section id="release-notes" class="level6">
-<h6 class="anchored" data-anchor-id="release-notes">2. <a href="./APIs/Others/ReleaseNotes.html">Release notes</a></h6>
-<p>The <a href="./APIs/Others/ReleaseNotes.html">release notes document</a> provides you with a comprehensive list of modifications made to the Catalog APIs for every release.</p>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p><strong>BatchV2 Processing API</strong> (or shortly "<strong>BatchV2 API</strong>") enables you to request data for large areas and/or longer time periods for any Sentinel Hub supported collection, including BYOC (bring your own data). It is an asynchronous REST service, meaning data won't be returned immediately but delivered to your specified object storage instead.</p>
+<section id="workflow" class="level3">
+<h3 class="anchored" data-anchor-id="workflow">Workflow</h3>
+<p>The Batch V2 Processing API comes with the set of REST APIs which support the execution of various workflows. The diagram below shows all possible statuses of a batch task:</p>
+<ul>
+<li><code>CREATED</code></li>
+<li><code>ANALYSING</code></li>
+<li><code>ANALYSIS_DONE</code></li>
+<li><code>PROCESSING</code></li>
+<li><code>DONE</code></li>
+<li><code>FAILED</code></li>
+<li><code>STOPPED</code></li>
+</ul>
+<p>and user's actions:</p>
+<ul>
+<li><code>ANALYSE</code></li>
+<li><code>START</code></li>
+<li><code>STOP</code></li>
+</ul>
+<p>which trigger transitions among them.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<p><img src="BatchV2_files/figure-html/mermaid-figure-1.png" style="width:4.15in;height:7.3in" class="figure-img"></p>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>The workflow starts when a user posts a new batch request. In this step the system:</p>
+<ul>
+<li>creates a new batch task with the status <code>CREATED</code>,</li>
+<li>validates the user's input (except the evalscript),</li>
+<li>ensures the user's account has at least 1000 PUs,</li>
+<li>uploads a JSON of the original request to the user's bucket,</li>
+<li>and returns the overview of the created task.</li>
+</ul>
+<p>The user can then decide to either request an additional analysis of the task or start the processing. When an additional analysis is requested:</p>
+<ul>
+<li>the status of the task changes to <code>ANALYSING</code>,</li>
+<li>the evalscript is validated,</li>
+<li>a <a href="../../APIs/SentinelHub/BatchV2.html#feature-manifest">feature manifest</a> file is uploaded to the user's bucket,</li>
+<li>after the analysis is finished, the status of the task changes to <code>ANALYSIS_DONE</code>.</li>
+</ul>
+<p>If the user chooses to directly start processing, the system still executes the analysis but when the analysis is done it automatically proceeds with processing. This is not explicitly shown in the diagram in order to keep it simple.</p>
+<p>When the user starts the processing:</p>
+<ul>
+<li>the status of the task changes to <code>PROCESSING</code> (this may take a while, depending on the load on the service),</li>
+<li>the processing starts,</li>
+<li>an <a href="../../APIs/SentinelHub/BatchV2.html#execution-database">execution database</a> is periodically uploaded to the user's bucket,</li>
+<li>spent processing units are billed periodically.</li>
+</ul>
+<p>When the processing is finished, the status of the task changes to <code>DONE</code>.</p>
+<section id="stopping-the-request" class="level4">
+<h4 class="anchored" data-anchor-id="stopping-the-request">Stopping the request</h4>
+<p>A task might be stopped for the following reasons:</p>
+<ul>
+<li>it's requested by a user (user action),</li>
+<li>user is out of processing units,</li>
+<li>something is wrong with the processing of the task (e.g.&nbsp;the system is not able to process the data).</li>
+</ul>
+<p>A user may stop the request in following states: <code>ANALYSING</code>, <code>ANALYSIS_DONE</code> and <code>PROCESSING</code>. However:</p>
+<ul>
+<li>if the status is <code>ANALYSING</code>, the analysis will complete,</li>
+<li>if the status is <code>PROCESSING</code>, all features (polygons) that have been processed or are being processed at that moment are charged for,</li>
+<li>user is not allowed to restart the task in the next 30 minutes.</li>
+</ul>
+<hr>
 </section>
 </section>
 </section>
-<section id="streamlined-data-access" class="level2">
-<h2 class="anchored" data-anchor-id="streamlined-data-access">Streamlined data access</h2>
-<p>The Streamlined Data Access APIs (SDA) enables users to access and retrieve Earth observation (EO) data from the Copernicus Data Space Ecosystem catalogue. These APIs also provide you with a set of tools and services to support data processing and analysiss.</p>
-<div id="listing-StreamlinedDataAccess" class="quarto-listing quarto-listing-container-grid">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1729872828207" data-listing-reading-time-sort="1" data-listing-word-count-sort="51">
-<a href="./APIs/SentinelHub.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Sentinel Hub
-</h5>
-<div class="card-text listing-description">
-Sentinel Hub is a multi-spectral and multi-temporal big data satellite imagery service capable of fully automated archiving, real-time processing and distribution of remote…
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1729872828243" data-listing-reading-time-sort="4" data-listing-word-count-sort="748">
-<a href="./APIs/openEO/openEO.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-openEO
-</h5>
-<div class="card-text listing-description">
-
-openEO represents an innovative community standard that revolutionizes geospatial data processing and analysis. This groundbreaking framework provides a novel approach to…
-</div>
-</div>
-</div>
-</a>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div>
+<section id="input-features" class="level2">
+<h2 class="anchored" data-anchor-id="input-features">Input features</h2>
+<p>BatchV2 API supports two ways of specifying the input features of your batch task:</p>
+<ol type="1">
+<li>Pre-defined <a href="../../APIs/SentinelHub/BatchV2.html#1-tiling-grid">Tiling Grid</a></li>
+<li>User-defined <a href="../../APIs/SentinelHub/BatchV2.html#2-geopackage">GeoPackage</a></li>
+</ol>
+<section id="1-tiling-grid" class="level3">
+<h3 class="anchored" data-anchor-id="1-tiling-grid">1. Tiling grid</h3>
+<p>For more effective processing we divide the area of interest into tiles and process each tile separately. While <code>process</code> API uses grids which come together with each datasource for processing of the data, the <code>batch</code> API uses one of the predefined tiling grids. The predefined tiling grids 0-2 are based on the <a href="https://sentinel.esa.int/web/sentinel/missions/sentinel-2/data-products" target="_blank">Sentinel-2 tiling</a> in WGS84/UTM projection with some adjustments:</p>
+<ul>
+<li>The width and height of tiles in the original Sentinel 2 grid is 100 km while the width and height of tiles in our grids are given in the table below.</li>
+<li>All redundant tiles (i.e.&nbsp;fully overlapped tiles) are removed.</li>
+</ul>
+<p>All available tiling grids can be requested with (<em>NOTE: To run this example you need to first create an OAuth client as is explained <a href="../../APIs/SentinelHub/Overview/Authentication.html#python">here</a></em>):</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> <span class="st">"https://sh.dataspace.copernicus.eu/api/v2/batch/tilinggrids/"</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>response <span class="op">=</span> oauth.request(<span class="st">"GET"</span>, url)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>response.json()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This will return the list of available grids and information about tile size and available resolutions for each grid. Currently, available grids are:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">name</th>
+<th style="text-align: left;">id</th>
+<th style="text-align: left;">tile size</th>
+<th style="text-align: left;">resolutions</th>
+<th style="text-align: left;">coverage</th>
+<th style="text-align: left;">output CRS</th>
+<th style="text-align: left;">download the grid [zip with shp file] **</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">UTM 20km grid</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">20040 m</td>
+<td style="text-align: left;">10 m, 20 m, 30m*, 60 m</td>
+<td style="text-align: left;">World, latitudes from -80.7° to 80.7°</td>
+<td style="text-align: left;">UTM</td>
+<td style="text-align: left;"><a href="https://s3.eu-central-1.amazonaws.com/sh-batch-grids/tiling-grid-0.zip" target="_blank">UTM 20km grid</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">UTM 10km grid</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">10000 m</td>
+<td style="text-align: left;">10 m, 20 m</td>
+<td style="text-align: left;">World, latitudes from -80.6° to 80.6°</td>
+<td style="text-align: left;">UTM</td>
+<td style="text-align: left;"><a href="https://s3.eu-central-1.amazonaws.com/sh-batch-grids/tiling-grid-1.zip" target="_blank">UTM 10km grid</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">UTM 100km grid</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">100080 m</td>
+<td style="text-align: left;">30m*, 60 m, 120 m, 240 m, 360 m</td>
+<td style="text-align: left;">World, latitudes from -81° to 81°</td>
+<td style="text-align: left;">UTM</td>
+<td style="text-align: left;"><a href="https://s3.eu-central-1.amazonaws.com/sh-batch-grids/tiling-grid-2.zip" target="_blank">UTM 100km grid</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">WGS84 1 degree grid</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">1 °</td>
+<td style="text-align: left;">0.0001°, 0.0002°</td>
+<td style="text-align: left;">World, all latitudes</td>
+<td style="text-align: left;">WGS84</td>
+<td style="text-align: left;"><a href="https://s3.eu-central-1.amazonaws.com/sh-batch-grids/tiling-grid-3.zip" target="_blank">WGS84 1 degree grid</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">LAEA 100km grid</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">100000 m</td>
+<td style="text-align: left;">40 m, 50 m, 100 m</td>
+<td style="text-align: left;">Europe, including Turkey, Iceland, Svalbald, Azores, and Canary Islands</td>
+<td style="text-align: left;">EPSG:3035</td>
+<td style="text-align: left;"><a href="https://s3.eu-central-1.amazonaws.com/sh-batch-grids/tiling-grid-6.zip" target="_blank">LAEA 100km grid</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">LAEA 20km grid</td>
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">20000 m</td>
+<td style="text-align: left;">10 m, 20 m</td>
+<td style="text-align: left;">Europe, including Turkey, Iceland, Svalbald, Azores, and Canary Islands</td>
+<td style="text-align: left;">EPSG:3035</td>
+<td style="text-align: left;"><a href="https://s3.eu-central-1.amazonaws.com/sh-batch-grids/tiling-grid-7.zip" target="_blank">LAEA 20km grid</a></td>
+</tr>
+</tbody>
+</table>
+<p>** The geometries of the tiles are reprojected to WGS84 for download. Because of this and other reasons the geometries of the output rasters may differ from the tile geometries provided here.</p>
+<p>To use <code>20km</code> grid with 60 m resolution, for example, specify <code>id</code> and <code>resolution</code> parameters of the <code>tilingGrid</code> object when creating a new batch request (see an example of <a href="../../APIs/SentinelHub/BatchV2/Examples.html#create-a-batchv2-processing-request">full request</a>) as:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="er">...</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"tilingGrid"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"id"</span><span class="fu">:</span> <span class="dv">0</span><span class="fu">,</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"resolution"</span><span class="fu">:</span> <span class="fl">60.0</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">},</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="er">...</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="additionally" class="level2">
-<h2 class="anchored" data-anchor-id="additionally">Additionally</h2>
-<p>Additional in Copernicus Data Space Ecosystem, we provide you with the S3 API, Traceability API and On-Demand Production API. The S3 API is one of the main access methods for EO data. Whereas, the Traceability API allows you to verify and register traces for user level data available in the Copernicus Data Space. Similarly, the On-Demand Production API provides you with on-demand processing capability for CARD-BS, CARD-COH6/12.</p>
-<div id="listing-AdditionalAPIs" class="quarto-listing quarto-listing-container-grid">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1729872828207" data-listing-reading-time-sort="7" data-listing-word-count-sort="1378">
-<a href="./APIs/S3.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Access to EO data via S3
-</h5>
-<div class="card-text listing-description">
-S3 API is one of the main access methods for EO data. It is suitable for Third Party applications that require high-performance parallel access and scalability. Moreover…
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1729872828207" data-listing-reading-time-sort="17" data-listing-word-count-sort="3233">
-<a href="./APIs/On-Demand Production API.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-On-Demand Production API
-</h5>
-<div class="card-text listing-description">
-On-Demand Production API provides access to two sets of data processing workflows:
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="2" data-listing-file-modified-sort="1729872828223" data-listing-reading-time-sort="3" data-listing-word-count-sort="408">
-<a href="./APIs/Traceability.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Traceability Service
-</h5>
-<div class="card-text listing-description">
-Traceability Service allows the user to track a data product’s lifecycle. It acts as a historian of the product’s lifecycle, collecting the traces of all related events.…
-</div>
-</div>
-</div>
-</a>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div>
-
+<section id="2-geopackage" class="level3">
+<h3 class="anchored" data-anchor-id="2-geopackage">2. GeoPackage</h3>
+<p>In addition to the predefined tiling grids, BatchV2 API now also support user-defined features through <a href="https://www.geopackage.org/spec/" target="_blank">GeoPackages</a>. This allows you to specify features of any shape as long as the underlying geometry is a POLYGON or MULTIPOLYGON in an <strong>EPSG compliant</strong> CRS listed <a href="../../APIs/SentinelHub/Process/Crs.html">here</a>. The GeoPackage can also have multiple layers, offering more flexibility in specifying features in multiple CRS.</p>
+<p>The GeoPackage must adhere to the <a href="https://www.geopackage.org/spec/" target="_blank">GeoPackage spec</a> and contain at <strong>least one feature table with any name</strong>. The table must include a column that holds the geometry data. This column can be named arbitrarily, but it must be listed as the geometry column in the <code>gpkg_geometry_columns</code> table. The table schema should include the following columns:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Column</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">id</td>
+<td style="text-align: left;">INTEGER <strong>(UNIQUE)</strong></td>
+<td style="text-align: left;">1000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">identifier</td>
+<td style="text-align: left;">TEXT <strong>(UNIQUE)</strong></td>
+<td style="text-align: left;">FEATURE_NAME</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">geometry</td>
+<td style="text-align: left;">POLYGON or MULTIPOLYGON</td>
+<td style="text-align: left;">Feature geometry representation in GeoPackage WKB format</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">width</td>
+<td style="text-align: left;">INTEGER</td>
+<td style="text-align: left;">1000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">height</td>
+<td style="text-align: left;">INTEGER</td>
+<td style="text-align: left;">1000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">resolution</td>
+<td style="text-align: left;">REAL</td>
+<td style="text-align: left;">0.005</td>
+</tr>
+</tbody>
+</table>
+<section id="caveats" class="level4">
+<h4 class="anchored" data-anchor-id="caveats">Caveats</h4>
+<ul>
+<li>You must specify either both width and height, or alternatively, specify resolution. If both values are provided, width and height will be used, and resolution will be ignored.</li>
+<li>The feature table must use a CRS that is <strong>EPSG compliant</strong>.</li>
+<li>Both <code>id</code> and <code>identifier</code> values must not be null and unique across all feature tables.</li>
+</ul>
+<p>An example of a batch task with GeoPackage input is available <a href="../../APIs/SentinelHub/BatchV2/Examples.html#option-3-geopackage-input-and-geotiff-output">here</a>.</p>
+<hr>
+</section>
+</section>
+</section>
+<section id="processing-results" class="level2">
+<h2 class="anchored" data-anchor-id="processing-results">Processing results</h2>
+<p>The outputs of a batch task will be stored to your object storage in either:</p>
+<ol type="1">
+<li>GeoTIFF (and JSON for metadata) or</li>
+<li>Zarr format</li>
+</ol>
+<section id="1-geotiff-output-format" class="level3">
+<h3 class="anchored" data-anchor-id="1-geotiff-output-format">1. GeoTIFF output format</h3>
+<p><strong>The GeoTIFF format will be used if your request includes the <code>output.type</code> parameter set to <code>raster</code>, along with other relevant parameters specified in the <a href="../../APIs/SentinelHub/ApiReference.html#tag/batch_v2_process/operation/createNewBatchV2ProcessingRequest">BatchV2 API reference</a>. An example of a batch task with GeoTIFF output is available <a href="../../APIs/SentinelHub/BatchV2/Examples.html#option-1-geotiff-format-output">here</a>.</strong></p>
+<p>By default, the results will be organized in sub-folders where one sub-folder will be created for each feature. Each sub-folder might contain one or more images depending on how many outputs were defined in the <a href="../../APIs/SentinelHub/Evalscript/V3.html#setup-function">evalscript</a> of the request. For example:</p>
+<p>You can also customize the sub-folder structure and file naming as described in the <code>delivery</code> parameter under <code>output</code> in <a href="../../APIs/SentinelHub/ApiReference.html#tag/batch_v2_process/operation/createNewBatchV2ProcessingRequest">BatchV2 API reference</a>.</p>
+<p>You can choose to return your GeoTIFF files as Cloud Optimized GeoTIFF (COG), by setting the <code>cogOutput</code> parameter under <code>output</code> in your request as <code>true</code>. Several advanced COG options can be selected as well - read about the parameter in <a href="../../APIs/SentinelHub/ApiReference.html#tag/batch_v2_process/operation/createNewBatchV2ProcessingRequest">BatchV2 API reference</a>.</p>
+<p>The output projection depends on the selected input, either tiling grid or GeoPackage:</p>
+<ol type="1">
+<li>If the input is a tiling grid, the results of batch processing will be in the projection of the selected <a href="../../APIs/SentinelHub/BatchV2.html#1-tiling-grid">tiling grid</a>. For UTM-based grids, each part of the AOI (area of interest) is delivered in the UTM zone with which it intersects. In other words, in case your AOI intersects with more UTM zones, the results will be delivered as tiles in different UTM zones (and thus different CRSs).</li>
+<li>If the input is a GeoPackage, the results will be in the same CRS as the input feature's CRS.</li>
+</ol>
+</section>
+<section id="2-zarr-output-format" class="level3">
+<h3 class="anchored" data-anchor-id="2-zarr-output-format">2. Zarr output format</h3>
+<p>The Zarr format will be used if your request includes the <code>output.type</code> parameter set to <code>zarr</code>, along with other relevant parameters specified in the <a href="../../APIs/SentinelHub/ApiReference.html#tag/batch_v2_process/operation/createNewBatchV2ProcessingRequest">BatchV2 API reference</a>. An example of a batch request with Zarr output is available <a href="../../APIs/SentinelHub/BatchV2/Examples.html#option-2-zarr-format-output">here</a>. Your request <strong>must</strong> only have one band per output and the <code>application/json</code> format in responses is <strong>not</strong> supported.</p>
+<p>The outputs of batch processing will be stored as a single Zarr group containing one data array for each evalscript output and multiple coordinate arrays. The output will be stored in a subfolder named after the <code>requestId</code> that you pass to the API in the <code>delivery.s3.url</code> parameter under <code>output</code>.</p>
+<hr>
+</section>
+</section>
+<section id="ingesting-results-into-byoc" class="level2">
+<h2 class="anchored" data-anchor-id="ingesting-results-into-byoc">Ingesting results into BYOC</h2>
+<section id="purpose" class="level4">
+<h4 class="anchored" data-anchor-id="purpose">Purpose</h4>
+<p>Enables automatic ingestion of processing results into a BYOC collection, allowing you to:</p>
+<ul>
+<li>Access data with Processing API, by using the collection ID</li>
+<li>Create a configuration with custom layers</li>
+<li>Make OGC requests to a configuration</li>
+<li>View data in EO Browser</li>
+</ul>
+<p>In order to enable this functionality, user needs to specify either id of an existing BYOC collection (<code>collectionId</code>) or set <code>createCollection = true</code>.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="er">...</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"output"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="er">...</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"createCollection"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"collectionId"</span><span class="fu">:</span> <span class="st">"&lt;byoc-collection-id&gt;"</span><span class="fu">,</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="er">...</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">},</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="er">...</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>If collectionId is provided, the existing collection will be used for data ingestion.</p>
+<p>If <code>createCollection</code> is set to <code>true</code> and <code>collectionId</code> is not provided, a new BYOC collection will be created automatically and the collection bands will be set according to the request output <code>responses</code> definitions.</p>
+<p>Regardless of whether the user specifies an existing collection or requests a new one, processed data will still be uploaded to the users bucket, where they will be available for download and analysis.</p>
+<p>When creating a new batch collection, one has to be careful to:</p>
+<ul>
+<li>Make sure that <code>cogOutput=true</code> and that the output format is a <code>image/tiff</code></li>
+<li>If an existing BYOC collection is used, make sure that <code>identifier</code> and <code>sampleType</code> from the output definition(s) match the name and the type of the BYOC band(s). Single band and multi-band outputs are supported.</li>
+<li>If multi-band output is used in the request, the additionally generated bands will be named using a numerical suffix in ascending order (e.g.&nbsp;2, ... 99). For example, if the <code>output: { id: "result", bands: 3 }</code> is used in the evalscript setup function, the produced BYOC bands will be named: <code>result</code> for band 1, <code>result2</code> for band 2 and <code>result3</code> for band 3. Make sure that no other output band has any of these automatically generated names, as this will throw an error during the analysis phase. The <code>output: [{ id: "result", bands: 3 },{ id: "result2", bands: 1 }]</code> will throw an exception.</li>
+<li>Keep sampleType in mind, as the values the evalscript returns when creating a collection will be the values available when making a request to access it.</li>
+</ul>
+</section>
+</section>
+<section id="feature-manifest" class="level2">
+<h2 class="anchored" data-anchor-id="feature-manifest">Feature Manifest</h2>
+<section id="purpose-1" class="level4">
+<h4 class="anchored" data-anchor-id="purpose-1">Purpose</h4>
+<ul>
+<li>Provides a detailed overview of features scheduled for processing during the <code>PROCESSING</code> step.</li>
+<li>Enables users to verify feature information and corresponding output paths prior to processing.</li>
+</ul>
+</section>
+<section id="key-information" class="level4">
+<h4 class="anchored" data-anchor-id="key-information">Key Information</h4>
+<ul>
+<li><strong>File Type:</strong> <a href="https://www.geopackage.org/spec/" target="_blank">GeoPackage</a></li>
+<li><strong>File Name:</strong> <code>featureManifest-&lt;requestId&gt;.gpkg</code></li>
+<li><strong>Location:</strong> Root folder of the specified output delivery path</li>
+<li><strong>Structure:</strong>
+<ul>
+<li>May contain multiple feature tables, one per distinct CRS used by the features.</li>
+<li>Table names follow the format <code>feature_&lt;crs-id&gt;</code> (e.g. <code>feature_4326</code>).</li>
+</ul></li>
+</ul>
+<p>During task analysis, the system will upload a file to the user's bucket called the <code>featureManifest-&lt;requestId&gt;.gpkg</code>. This file is a GeoPackage that contains basic information about the features that will be processed during the <code>PROCESSING</code> step. It is intended to be used by users to check the features that will be processed and their corresponding output paths.</p>
+<p>If the output type is set to <code>raster</code>, the output paths will be the paths to the GeoTIFF files. If the output type is <code>zarr</code>, the output paths will just be the root of the output folder.</p>
+<p>The database may contain multiple feature tables, one feature table for each CRS of all features. The tables will be named <code>feature_&lt;crs-id&gt;</code>, e.g.&nbsp;<code>feature_4326</code>. <br>The schema of feature tables inside the database is currently the following:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">fid</td>
+<td style="text-align: left;">INTEGER</td>
+<td style="text-align: left;">Auto-incrementing ID</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">id</td>
+<td style="text-align: left;">INTEGER</td>
+<td style="text-align: left;">Numerical ID of the feature</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">identifier</td>
+<td style="text-align: left;">TEXT</td>
+<td style="text-align: left;">Textual ID of the feature</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">path</td>
+<td style="text-align: left;">TEXT</td>
+<td style="text-align: left;">The object storage path URI where the feature will be uploaded to</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">geometry</td>
+<td style="text-align: left;">GEOMETRY</td>
+<td style="text-align: left;">Feature geometry representation in GeoPackage WKB format</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+</section>
+<section id="execution-database" class="level2">
+<h2 class="anchored" data-anchor-id="execution-database">Execution database</h2>
+<section id="purpose-2" class="level3">
+<h3 class="anchored" data-anchor-id="purpose-2">Purpose</h3>
+<p>The Execution Database serves as a monitoring tool for tracking the progress of feature execution within a specific task. It provides users with insight into the status of each feature being processed.</p>
+</section>
+<section id="key-information-1" class="level3">
+<h3 class="anchored" data-anchor-id="key-information-1">Key Information</h3>
+<ul>
+<li><strong>File Type:</strong> SQLite</li>
+<li><strong>File Name:</strong> <code>execution-&lt;requestId&gt;.sqlite</code></li>
+<li><strong>Location:</strong> Root folder of specified output delivery path</li>
+<li><strong>Structure:</strong>
+<ul>
+<li>Contains a single table called <code>features</code>.</li>
+</ul></li>
+</ul>
+<p>You can monitor the execution of your features for a specific task by checking the SQLite database that is uploaded to your bucket. The database contains the name and status of each feature. The database is updated periodically during the execution of the task.</p>
+<p>The database can be found in your bucket in the root output folder and is named <code>execution-&lt;requestId&gt;.sqlite</code>.</p>
+<p>The schema of the <code>features</code> table is currently the following:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">id</td>
+<td style="text-align: left;">INTEGER</td>
+<td style="text-align: left;">Numerical ID of the feature</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">name</td>
+<td style="text-align: left;">TEXT</td>
+<td style="text-align: left;">Textual ID of the feature</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">status</td>
+<td style="text-align: left;">TEXT</td>
+<td style="text-align: left;">Status of the feature (PENDING, DONE, FAILED, etc.)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">error</td>
+<td style="text-align: left;">TEXT</td>
+<td style="text-align: left;">Error message in case processing has failed</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">delivered</td>
+<td style="text-align: left;">BOOLEAN</td>
+<td style="text-align: left;"><code>True</code> if output delivered to delivery bucket, otherwise <code>False</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+</section>
+<section id="bucket-settings-and-access" class="level2">
+<h2 class="anchored" data-anchor-id="bucket-settings-and-access">Bucket settings and access</h2>
+<p>The results will be delivered in your own bucket hosted at Copernicus Data Space Ecosystem. To access your bucket accessKey and secretAccessKey pair have to bo provided in your request.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>s3 = {</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    "url": "s3://&lt;your-bucket&gt;/&lt;path&gt;",</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    "accessKey": "&lt;your-bucket-access-key&gt;",</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    "secretAccessKey": "&lt;your-bucket-secret-access-key&gt;"</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>If you do not yet have a bucket at Copernicus Data Space Ecosystem, please follow <a href="https://creodias.docs.cloudferro.com/en/latest/s3/Create-S3-bucket-and-use-it-in-Sentinel-Hub-requests.html" target="_blank">these steps</a> to get one.</p>
+</section>
+<section id="examples" class="level2">
+<h2 class="anchored" data-anchor-id="examples">Examples</h2>
+<p><a href="../../APIs/SentinelHub/BatchV2/Examples.html">Example of Batch Processing Workflow</a></p>
 
 
 </section>
@@ -1927,18 +2154,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation column-body">
-  <div class="nav-page nav-page-previous">
-      <a href="./Data/Others/CCM.html" class="pagination-link" aria-label="Copernicus Contributing Missions">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Copernicus Contributing Missions</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="./APIs/Token.html" class="pagination-link" aria-label="Access Token">
-        <span class="nav-page-text">Access Token</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 
 
