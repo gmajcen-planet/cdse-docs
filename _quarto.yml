@@ -242,6 +242,13 @@ website:
                     text: CRS
                   - href: "APIs/SentinelHub/Batch/Examples.qmd"
                     text: Examples of Batch Processing Workflow
+              - section: "Batch Processing API V2"
+                href: "APIs/SentinelHub/BatchV2.qmd"
+                contents:
+                  - href: "APIs/SentinelHub/BatchV2/Migration.qmd"
+                    text: Migration
+                  - href: "APIs/SentinelHub/BatchV2/Examples.qmd"
+                    text: Examples of Batch V2 Processing Workflow
               - section: "Statistical API"
                 href: "APIs/SentinelHub/Statistical.qmd"
                 contents:
