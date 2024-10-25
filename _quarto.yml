@@ -235,13 +235,6 @@ website:
                 contents:
                   - href: "APIs/SentinelHub/Catalog/Examples.qmd"
                     text: Examples for Catalog API
-              - section: "Batch Processing API"
-                href: "APIs/SentinelHub/Batch.qmd"
-                contents:
-                  - href: "APIs/SentinelHub/Batch/Crs.qmd"
-                    text: CRS
-                  - href: "APIs/SentinelHub/Batch/Examples.qmd"
-                    text: Examples of Batch Processing Workflow
               - section: "Batch Processing API V2"
                 href: "APIs/SentinelHub/BatchV2.qmd"
                 contents:
@@ -249,6 +242,13 @@ website:
                     text: Migration
                   - href: "APIs/SentinelHub/BatchV2/Examples.qmd"
                     text: Examples of Batch V2 Processing Workflow
+              - section: "Batch Processing API"
+                href: "APIs/SentinelHub/Batch.qmd"
+                contents:
+                  - href: "APIs/SentinelHub/Batch/Crs.qmd"
+                    text: CRS
+                  - href: "APIs/SentinelHub/Batch/Examples.qmd"
+                    text: Examples of Batch Processing Workflow
               - section: "Statistical API"
                 href: "APIs/SentinelHub/Statistical.qmd"
                 contents:
